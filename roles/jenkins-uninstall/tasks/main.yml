@@ -1,0 +1,28 @@
+---
+- name: Stop Jenkins service
+  systemd:
+     name: jenkins
+     state: disabled
+
+- name: Uninstall openjdk
+  yum:
+    name: java-1.8.0-openjdk
+    state: absent
+
+- name: Uninstall Jenkins
+  yum: 
+    name: jenkins
+    state: absent
+    
+- name: Uninstall Maven
+  yum: 
+    name: maven
+    state: absent
+
+     
+- name: sleep for 30 seconds
+  wait_for:
+     timeout: 45
+
+   
+
