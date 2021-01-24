@@ -1,7 +1,7 @@
 pipeline{
     agent any
 	parameters{
-		choice(name: 'task', choices: ['install','uninstall'], description: 'specify install\uninstall jenkins')
+		choice(name: 'task', choices: ['install','uninstall'], description: '')
 	}
     stages{  
         stage("Execute Ansible"){
