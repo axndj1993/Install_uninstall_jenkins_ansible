@@ -2,7 +2,7 @@
 - name: Stop Jenkins service
   systemd:
      name: jenkins
-     state: disabled
+     state: stopped
 
 - name: Uninstall openjdk
   yum:
