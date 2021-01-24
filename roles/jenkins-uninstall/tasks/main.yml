@@ -22,7 +22,7 @@
      
 - name: sleep for 30 seconds
   wait_for:
-     timeout: 45
+     timeout: 30
 
    
 
